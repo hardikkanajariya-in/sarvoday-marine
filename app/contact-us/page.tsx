@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { COMPANY_INFO, BRANCH_OFFICES, SERVICES } from "@/lib/data/site-data";
 
@@ -71,27 +70,19 @@ export default function ContactUsPage() {
 
             <div className="inline-block mb-3">
               <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 border border-slate-700 px-2.5 py-1 rounded">
-                [ HEAD OFFICE & BRANCH NETWORK ]
+                OPERATIONS & DISPATCH DESK
               </span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-              Contact Us & Office Directory
+              Contact & Branch Network
             </h1>
             <p className="text-sm sm:text-base text-slate-300 mt-4 leading-relaxed">
-              Reach our duty operations coordinators 24/7. Explore our Registered Head Office in Rajula, 16 branch hubs, and PAN-India mobilization network.
+              Connect directly with our 24/7 technical duty officers. Coordinate surveyor attendance or domestic multimodal transit across all Indian maritime corridors.
             </p>
           </div>
         </div>
       </section>
-
-      {/* PAN-India Notice Bar */}
-      <div className="bg-[#081526] text-slate-300 border-b border-slate-800 py-3 px-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between text-xs font-mono">
-          <span>[ PAN-INDIA GUARANTEE: MOBILIZATION TO ALL PORTS, CFS, ICDS & INDUSTRIAL RAIL SIDINGS ]</span>
-          <span className="hidden sm:inline text-slate-400">EST. NOVEMBER 2014</span>
-        </div>
-      </div>
 
       {/* Enquiry Form and Head Office Column */}
       <section className="py-16 sm:py-20 bg-white" id="enquiry">
@@ -101,13 +92,13 @@ export default function ContactUsPage() {
             <div className="lg:col-span-7 bg-[#FAF9F6] p-8 sm:p-10 rounded-lg border border-slate-200">
               <div className="mb-6 border-b border-slate-200 pb-4">
                 <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#C25E00]">
-                  DIRECT ATTENDANCE DESK
+                  FIELD ATTENDANCE BOOKING
                 </span>
                 <h2 className="text-xl sm:text-2xl font-bold text-[#081526] mt-1">
                   Request an Inspection / Logistics Quote
                 </h2>
                 <p className="text-xs text-slate-600 mt-1">
-                  Provide your vessel or cargo requirements. Requests are routed instantly to our duty survey managers.
+                  Provide your vessel or cargo specifications. Inquiries are routed immediately to our technical duty managers.
                 </p>
               </div>
 
@@ -131,7 +122,7 @@ export default function ContactUsPage() {
                 <form className="space-y-4">
                   <div>
                     <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-600 mb-1">
-                      Service Offering <span className="text-red-500">*</span>
+                      Service Division <span className="text-red-500">*</span>
                     </label>
                     <select
                       value={service}
@@ -252,7 +243,7 @@ export default function ContactUsPage() {
             <div className="lg:col-span-5 space-y-6">
               <div className="bg-[#081526] text-white rounded-lg p-8 border border-slate-800 space-y-4">
                 <span className="font-mono text-[10px] uppercase text-slate-400">
-                  REGISTERED CORPORATE HEADQUARTERS
+                  REGISTERED HEADQUARTERS
                 </span>
                 <h3 className="text-2xl font-bold text-white">
                   Head Office — Rajula
@@ -311,13 +302,13 @@ export default function ContactUsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-10">
             <span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500">
-              [ NATIONWIDE FIELD HUBS ]
+              OPERATIONAL STATIONS
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#081526] mt-2 tracking-tight">
               Branch Offices Directory
             </h2>
             <p className="text-sm text-slate-600 mt-2">
-              Filter our 16 operational hubs by state. Certified surveyors deploy to any adjacent port, terminal, or siding.
+              Stationed across Western, Eastern, and North-Eastern maritime trade zones. Select a state to filter branch stations:
             </p>
 
             {/* State Filter Tabs */}
@@ -360,7 +351,7 @@ export default function ContactUsPage() {
                       {b.state}
                     </h3>
                     <span className="font-mono text-[10px] text-[#1D70B8] font-bold">
-                      STATE: {b.stateCode}
+                      {b.stateCode}
                     </span>
                   </div>
 

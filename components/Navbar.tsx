@@ -36,7 +36,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
           <div className="flex items-center gap-3 text-xs tracking-wider uppercase font-medium">
             <span className="text-slate-400 font-mono text-[11px] tracking-normal">
-              [ PAN-INDIA SURVEY & LOGISTICS NETWORK • EST. 2014 ]
+              TECHNICAL MARITIME SURVEYING & CABOTAGE LOGISTICS
             </span>
           </div>
 

@@ -3,7 +3,6 @@
 import React, { useState, createContext, useContext } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import EnquiryModal from "@/components/EnquiryModal";
 
 interface ModalContextType {
@@ -31,7 +30,6 @@ export default function ClientLayoutWrapper({ children }: { children: React.Reac
         <Navbar onOpenEnquiry={() => openEnquiryModal()} />
         <main className="flex-grow">{children}</main>
         <Footer />
-        <WhatsAppButton />
         <EnquiryModal
           isOpen={modalOpen}
           onClose={() => setModalOpen(false)}

@@ -9,12 +9,11 @@ export default function HomePage() {
   return (
     <div className="flex flex-col bg-[#FAF9F6]">
       {/* Hero Section */}
-      <section className="relative bg-[#081526] text-white overflow-hidden min-h-[580px] lg:min-h-[640px] flex items-center border-b border-slate-800">
-        {/* Background Image with Muted Vignette */}
+      <section className="relative bg-[#081526] text-white overflow-hidden min-h-[560px] lg:min-h-[620px] flex items-center border-b border-slate-800">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero.jpg"
-            alt="Commercial Cargo Vessel and Port Facility"
+            alt="Commercial Cargo Vessel and Seaport Operations"
             fill
             priority
             className="object-cover object-center opacity-25"
@@ -25,8 +24,8 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 relative z-10 w-full">
           <div className="max-w-3xl">
             <div className="inline-block mb-4">
-              <span className="font-mono text-xs text-slate-300 uppercase tracking-wider border border-slate-700 bg-slate-900/60 px-3 py-1 rounded">
-                [ PAN-INDIA MOBILIZATION • EST. NOV 2014 ]
+              <span className="font-mono text-xs text-slate-300 uppercase tracking-wider border border-slate-700 bg-slate-900/80 px-3 py-1 rounded">
+                TECHNICAL MARITIME SUPERINTENDENCE
               </span>
             </div>
 
@@ -35,7 +34,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed mb-8 max-w-2xl font-normal">
-              Mobilizing 100+ certified marine surveyors, master mariners, and logistics coordinators across Indian maritime corridors. Providing legally sound vessel draft calculations, bulk cargo ullages, container audits, and seamless domestic freight.
+              Providing impartial vessel condition surveys, liquid cargo custody audits, container inspection, and domestic multimodal freight coordination across Indian commercial ports and inland terminals.
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
@@ -43,7 +42,7 @@ export default function HomePage() {
                 href="/contact-us#enquiry"
                 className="px-8 py-3.5 bg-[#C25E00] hover:bg-[#A34E00] text-white text-xs font-bold uppercase tracking-wider rounded shadow-xs transition-colors text-center"
               >
-                Request Inspection / Quote
+                Request Survey Attendance
               </Link>
               <Link
                 href="/services"
@@ -52,19 +51,6 @@ export default function HomePage() {
                 Explore Services Catalog
               </Link>
             </div>
-
-            {/* Architectural Trust Tags */}
-            <div className="mt-12 pt-6 border-t border-slate-800 grid grid-cols-2 sm:grid-cols-3 gap-4 font-mono text-xs text-slate-300">
-              <div>
-                <span className="text-slate-400">AUDIT:</span> Legally Admissible
-              </div>
-              <div>
-                <span className="text-slate-400">STAFF:</span> 100+ Trained Surveyors
-              </div>
-              <div>
-                <span className="text-slate-400">SCOPE:</span> 100% PAN-India Ports
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -72,38 +58,38 @@ export default function HomePage() {
       {/* Trust & Stats Counter Banner */}
       <StatsBanner />
 
-      {/* Company Introduction / Heritage */}
+      {/* Company Philosophy & Operational Rigor */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
               <span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500">
-                [ CORPORATE PROFILE ]
+                INDEPENDENT TECHNICAL AUTHORITY
               </span>
 
               <h2 className="text-2xl sm:text-4xl font-extrabold text-[#081526] tracking-tight leading-snug">
-                A Decade of Maritime Inspection & Domestic Freight Leadership
+                Rigorous Inspection Built on Marine Precedent & Objective Evidence
               </h2>
 
               <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                Founded in November 2014, <strong>Sarvoday Marine Services Pvt. Ltd.</strong> has established an uncompromised reputation across Indian ports and rail corridors. Backed by a team of over 100 trained professionals, we mobilize certified personnel to ensure precision project execution while upholding rigorous standards of quality, safety, and operational transparency.
+                In high-stakes maritime commerce, accurate technical documentation is the difference between seamless voyage reconciliation and prolonged commercial disputes. Sarvoday Marine operates as an impartial technical surveyor, producing legally admissible reports recognized by shipowners, P&I clubs, and marine underwriters.
               </p>
 
               <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                Under the same trusted Sarvoday umbrella, our <strong>Cabotage Logistics Solutions</strong> coordinates domestic and regional cargo transit—linking coastal shipping, container rakes, and freight trucking for end-to-end supply chain visibility.
+                Our scope encompasses calibrated displacement calculations, liquid petroleum custody transfers, heavy-lift sea-fastening calculations, and continuous hatch supervision. Additionally, our <strong>Cabotage Logistics Solutions</strong> coordinates coastal vessel movements, rail container rakes, and regional freight corridors under one unified operational standard.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div className="p-5 rounded border border-slate-200 bg-[#FAF9F6]">
-                  <div className="font-bold text-[#081526] text-sm mb-1">Experienced Board</div>
+                  <div className="font-bold text-[#081526] text-sm mb-1">Technical Governance</div>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    Decades of collective master mariner and port terminal management experience driving strategic decision-making.
+                    Surveys directed by master mariners and certified marine engineers adhering strictly to IMO, SOLAS, and classification guidelines.
                   </p>
                 </div>
                 <div className="p-5 rounded border border-slate-200 bg-[#FAF9F6]">
-                  <div className="font-bold text-[#081526] text-sm mb-1">Skilled Manpower</div>
+                  <div className="font-bold text-[#081526] text-sm mb-1">Rapid Berth Mobilization</div>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    Continuous technical grooming, safety audits, and strict compliance with international maritime codes.
+                    Stationed field teams enable immediate boarding at ports, anchorages, and private jetties upon vessel arrival.
                   </p>
                 </div>
               </div>
@@ -113,7 +99,7 @@ export default function HomePage() {
                   href="/about-us"
                   className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#1D70B8] hover:text-[#081526] transition-colors"
                 >
-                  <span>Read Full Company Profile & Leadership</span>
+                  <span>Company Profile & Leadership Credentials</span>
                   <span>→</span>
                 </Link>
               </div>
@@ -123,7 +109,7 @@ export default function HomePage() {
               <div className="relative h-[380px] sm:h-[440px] w-full rounded-lg overflow-hidden border border-slate-200 shadow-sm bg-slate-900">
                 <Image
                   src="/images/about-operations.jpg"
-                  alt="Sarvoday Marine Technical Surveyors"
+                  alt="Sarvoday Marine Technical Personnel"
                   fill
                   className="object-cover"
                 />
@@ -133,19 +119,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Grid Section */}
+      {/* Services Divisions Section */}
       <section className="py-20 bg-[#F4F6F9] border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
             <div className="max-w-2xl">
               <span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500">
-                [ SERVICE DIVISIONS ]
+                CORE CAPABILITIES
               </span>
               <h2 className="text-2xl sm:text-4xl font-extrabold text-[#081526] mt-2 tracking-tight">
-                Our Core Technical Capabilities
+                Our Primary Service Divisions
               </h2>
               <p className="text-sm text-slate-600 mt-2">
-                Mathematically verified vessel draft surveys, liquid ullages, container terminal audits, and domestic cargo movement under one unified brand.
+                Comprehensive technical survey disciplines tailored to bulk, liquid, containerized, and heavy project cargoes.
               </p>
             </div>
             <Link
@@ -172,7 +158,7 @@ export default function HomePage() {
                     />
                     <div className="absolute top-3 left-3">
                       <span className="font-mono text-[10px] uppercase text-white bg-[#081526]/90 px-2 py-0.5 rounded">
-                        DIV 0{idx + 1}
+                        DIVISION 0{idx + 1}
                       </span>
                     </div>
                   </div>
@@ -216,30 +202,30 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4-Step Working Process */}
+      {/* 4-Phase Operational Workflow */}
       <ProcessSteps />
 
-      {/* PAN-India Branch Network Grid */}
+      {/* Strategic Port Distribution */}
       <section className="py-20 bg-white border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-[#081526] rounded-lg p-8 sm:p-12 text-white border border-slate-800">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-7 space-y-4">
                 <span className="font-mono text-xs uppercase tracking-wider text-slate-400">
-                  [ STRATEGIC PRESENCE ]
+                  GEOGRAPHIC FOOTPRINT
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-                  Head Office & 16 Branch Hubs Across India
+                  Strategic Presence Across India&apos;s Prime Maritime Corridors
                 </h2>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  Headquartered at Rajula (Amreli, Gujarat) with strategically deployed field stations across Western, Eastern, and North-Eastern maritime corridors. Certified personnel mobilize to any private berth or inland siding across the nation.
+                  Our station network ensures prompt surveyor mobilization at key deep-water ports, private maritime terminals, container freight stations, and industrial railway sidings across Western, Eastern, and North-Eastern India.
                 </p>
 
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
                   {BRANCH_OFFICES.map((branch, bIdx) => (
                     <div key={bIdx} className="bg-slate-900 p-3 rounded border border-slate-800">
                       <div className="font-mono text-[11px] text-slate-400">{branch.state}</div>
-                      <div className="text-base font-extrabold text-white mt-0.5">{branch.cities.length} Hubs</div>
+                      <div className="text-base font-extrabold text-white mt-0.5">{branch.cities.length} Stations</div>
                     </div>
                   ))}
                 </div>
@@ -256,10 +242,10 @@ export default function HomePage() {
 
               <div className="lg:col-span-5 bg-slate-900/90 rounded p-6 border border-slate-800 space-y-3">
                 <div className="font-mono text-[11px] text-slate-400 uppercase">
-                  REGISTERED HEADQUARTERS
+                  OPERATIONS & DISPATCH DESK
                 </div>
                 <div className="text-sm font-bold text-white">
-                  Rajula — Gujarat
+                  Head Office — Rajula
                 </div>
                 <p className="text-xs text-slate-300 leading-relaxed">
                   {COMPANY_INFO.contacts.headOffice.address}
@@ -267,7 +253,7 @@ export default function HomePage() {
                 <div className="pt-2 border-t border-slate-800 text-xs space-y-1 text-slate-400">
                   <div>Director: <span className="text-slate-200 font-semibold">Rajkumar Mall</span></div>
                   <div>GM Operations: <span className="text-slate-200 font-semibold">Harshit Gajjar</span></div>
-                  <div>24/7 Desk: <span className="text-white font-mono">{COMPANY_INFO.contacts.phones[0].display}</span></div>
+                  <div>Direct Phone: <span className="text-white font-mono">{COMPANY_INFO.contacts.phones[0].display}</span></div>
                 </div>
               </div>
             </div>
@@ -275,35 +261,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Corporate Call to Action */}
+      {/* Immediate Booking Action Bar */}
       <section className="py-14 bg-[#050E1A] text-white border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div>
             <div className="font-mono text-[11px] uppercase tracking-wider text-slate-400">
-              DISPATCH & BOOKING HOTLINE
+              FIELD ATTENDANCE & BOOKINGS
             </div>
             <h2 className="text-xl sm:text-2xl font-bold mt-1">
-              Ready to Schedule an Inspection or Domestic Transit?
+              Need Immediate Vessel or Cargo Superintendence?
             </h2>
             <p className="text-xs text-slate-400 mt-1">
-              Our technical coordinators are available 24/7 for prompt vessel attendance and transport quotations.
+              Contact our duty officers for surveyor scheduling and transparent service estimates.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
+          <div className="shrink-0">
             <Link
               href="/contact-us#enquiry"
-              className="px-6 py-3 bg-[#C25E00] hover:bg-[#A34E00] text-white text-xs font-bold uppercase tracking-wider rounded transition-colors"
+              className="px-6 py-3 bg-[#C25E00] hover:bg-[#A34E00] text-white text-xs font-bold uppercase tracking-wider rounded transition-colors inline-block"
             >
-              Get Instant Quotation
+              Submit Requirements Online
             </Link>
-            <a
-              href={`https://wa.me/${COMPANY_INFO.contacts.whatsapp.number.replace("+", "")}?text=${encodeURIComponent(COMPANY_INFO.contacts.whatsapp.defaultMessage)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold uppercase tracking-wider rounded border border-slate-700 transition-colors"
-            >
-              WhatsApp Desk
-            </a>
           </div>
         </div>
       </section>

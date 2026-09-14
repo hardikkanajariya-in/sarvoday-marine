@@ -144,24 +144,6 @@ export default function ServiceDetailTemplate({ service }: ServiceDetailTemplate
                   ))}
                 </div>
               </div>
-
-              {/* PAN-India Notice */}
-              <div className="bg-[#EBF3FA] rounded-lg p-6 border border-sky-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <div>
-                  <div className="text-xs font-mono font-bold uppercase text-[#1D70B8]">
-                    [ IMMEDIATE BERTH DISPATCH ]
-                  </div>
-                  <p className="text-xs sm:text-sm text-slate-800 mt-1">
-                    Certified field surveyors mobilize on short notice across Mundra, Hazira, JNPT, Haldia, and all commercial Indian ports.
-                  </p>
-                </div>
-                <Link
-                  href="/contact-us#enquiry"
-                  className="px-5 py-2 bg-[#081526] hover:bg-[#050E1A] text-white text-xs font-bold uppercase tracking-wider rounded shrink-0 transition-colors"
-                >
-                  Book Attendance
-                </Link>
-              </div>
             </div>
 
             {/* Right Sticky Column */}
