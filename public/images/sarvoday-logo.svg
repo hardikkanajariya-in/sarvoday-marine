@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sailGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0e2b5c" />
+    </linearGradient>
+    <linearGradient id="hullGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0e2b5c" />
+      <stop offset="70%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sailboat Icon -->
+  <g transform="translate(10, 10)">
+    <!-- Main Sail (Left) -->
+    <path d="M 45 10 Q 55 50 25 75 Q 40 70 50 65 Q 48 35 45 10 Z" fill="url(#sailGrad)" />
+    <!-- Foresail (Right) -->
+    <path d="M 52 18 Q 72 45 68 70 Q 56 66 52 64 Q 56 40 52 18 Z" fill="url(#sailGrad)" opacity="0.9" />
+    <!-- Cabin curve -->
+    <path d="M 32 73 Q 50 68 62 72 Q 48 76 32 73 Z" fill="#ffffff" />
+    <!-- Hull -->
+    <path d="M 12 85 Q 24 80 40 80 L 80 78 Q 88 78 92 84 L 84 89 Q 45 93 15 91 L 12 85 Z" fill="url(#hullGrad)" />
+    <path d="M 20 89 L 75 87 L 70 91 L 22 92 Z" fill="#0b1e3d" />
+  </g>
+
+  <!-- Wordmark Typography -->
+  <g transform="translate(120, 36)">
+    <!-- SARVODAY -->
+    <text x="0" y="24" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="28" fill="#0e2b5c" letter-spacing="1.5">SARVODAY</text>
+    <!-- MARINE SERVICES PVT. LTD. -->
+    <text x="0" y="50" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="16" fill="#0284c7" letter-spacing="3.5">MARINE SERVICES PVT. LTD.</text>
+    <text x="1" y="68" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="9" fill="#64748b" letter-spacing="1.5">INSPECTIONS • SURVEYS • CABOTAGE LOGISTICS</text>
+  </g>
+</svg>
