@@ -6,37 +6,35 @@ import { SERVICES, COMPANY_INFO } from "@/lib/data/site-data";
 import StatsBanner from "@/components/StatsBanner";
 
 export const metadata: Metadata = {
-  title: "Services Overview | Marine Inspections & Cabotage Logistics",
+  title: "Services Portfolio | Marine Inspections & Cabotage Logistics",
   description:
     "Explore Sarvoday Marine's full suite of services: Marine Inspections, Liquid Cargo, General Cargo, Project & ODC, Container Surveys, and Cabotage Logistics Solutions.",
 };
 
 export default function ServicesPage() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-[#FAF9F6]">
       {/* Services Header Banner */}
-      <section className="bg-[#071937] text-white py-16 sm:py-20 relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero.jpg"
-            alt="Sarvoday Marine Services"
-            fill
-            priority
-            className="object-cover object-center opacity-25"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#071937] via-[#071937]/90 to-transparent"></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="bg-[#081526] text-white py-14 sm:py-16 border-b border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-wider text-sky-400 bg-sky-950/80 border border-sky-800 px-3 py-1 rounded-full">
-              Full Service Portfolio
-            </span>
-            <h1 className="text-3xl sm:text-5xl font-black text-white mt-4 tracking-tight">
-              Inspection, Survey & Cabotage Logistics Solutions
+            <div className="flex items-center gap-2 text-xs font-mono text-slate-400 mb-3">
+              <Link href="/" className="hover:text-white transition-colors">HOME</Link>
+              <span>/</span>
+              <span className="text-[#1D70B8]">SERVICES</span>
+            </div>
+
+            <div className="inline-block mb-3">
+              <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 border border-slate-700 px-2.5 py-1 rounded">
+                [ SERVICE PORTFOLIO ]
+              </span>
+            </div>
+
+            <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+              Inspection, Survey & Cabotage Logistics
             </h1>
-            <p className="text-base sm:text-lg text-slate-200 mt-4 leading-relaxed">
-              Precision technical audits, certified maritime loss assessments, and seamless nationwide cargo transit backed by over 100 trained professionals.
+            <p className="text-sm sm:text-base text-slate-300 mt-4 leading-relaxed">
+              Certified technical audits, independent loss evaluations, and domestic cargo transit backed by over 100 trained professionals across Indian ports.
             </p>
           </div>
         </div>
@@ -46,32 +44,30 @@ export default function ServicesPage() {
       <StatsBanner />
 
       {/* Services Catalog */}
-      <section className="py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#0284c7] bg-sky-50 px-3 py-1 rounded-full">
-              Our 6 Major Offerings
+          <div className="max-w-3xl mb-14">
+            <span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500">
+              [ SIX CORE DIVISIONS ]
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0e2b5c] mt-3 tracking-tight">
-              Specialized Solutions for Every Maritime Need
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-[#081526] mt-2 tracking-tight">
+              Comprehensive Maritime & Intermodal Solutions
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 mt-3">
-              Click into any offering below for in-depth sub-service capabilities, methodologies, and direct quotation requests.
+            <p className="text-sm text-slate-600 mt-2">
+              Select any division below to view comprehensive sub-service specifications, methodologies, and direct attendance booking.
             </p>
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-12">
             {SERVICES.map((srv, idx) => (
               <div
                 key={srv.id}
                 id={srv.id}
-                className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center p-6 sm:p-8 rounded-3xl border border-slate-200/80 transition-all duration-300 hover:shadow-xl ${
-                  idx % 2 === 1 ? "bg-slate-50/70" : "bg-white"
-                }`}
+                className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-6 sm:p-8 rounded-lg border border-slate-200 bg-[#FAF9F6] hover:border-slate-400 transition-colors"
               >
-                {/* Image column */}
+                {/* Image Column */}
                 <div
-                  className={`lg:col-span-5 relative h-[280px] sm:h-[350px] w-full rounded-2xl overflow-hidden shadow-md bg-slate-100 ${
+                  className={`lg:col-span-5 relative h-[260px] sm:h-[320px] w-full rounded overflow-hidden border border-slate-200 bg-slate-900 ${
                     idx % 2 === 1 ? "lg:order-2" : ""
                   }`}
                 >
@@ -81,81 +77,58 @@ export default function ServicesPage() {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute top-4 left-4">
-                    <span className="text-xs font-bold uppercase tracking-wider text-sky-300 bg-[#071937]/90 px-3 py-1 rounded-md backdrop-blur-xs border border-white/10">
-                      Service 0{idx + 1}
+                  <div className="absolute top-3 left-3">
+                    <span className="font-mono text-[10px] uppercase text-white bg-[#081526]/90 px-2 py-0.5 rounded">
+                      DIVISION 0{idx + 1}
                     </span>
                   </div>
                 </div>
 
-                {/* Details column */}
+                {/* Details Column */}
                 <div className={`lg:col-span-7 space-y-4 ${idx % 2 === 1 ? "lg:order-1" : ""}`}>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-[#0e2b5c]">
+                  <h3 className="text-2xl font-bold text-[#081526]">
                     {srv.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                  <p className="text-sm text-slate-700 leading-relaxed">
                     {srv.fullDescription}
                   </p>
 
                   {/* Sub-services pills */}
                   <div>
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
-                      Key Sub-Service Capabilities:
-                    </h4>
+                    <div className="font-mono text-[10px] uppercase tracking-wider text-slate-400 mb-2">
+                      SUB-SERVICE VERIFICATION SCOPES:
+                    </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {srv.subServices.map((sub, sIdx) => (
                         <div
                           key={sIdx}
-                          className="flex items-start gap-2 bg-white/80 p-2.5 rounded-lg border border-slate-100 text-xs text-slate-700"
+                          className="flex items-start gap-2 bg-white p-2.5 rounded border border-slate-200 text-xs text-slate-700"
                         >
-                          <span className="text-sky-500 font-bold shrink-0">✓</span>
-                          <div>
-                            <span className="font-semibold text-slate-800">{sub.title}</span>
-                          </div>
+                          <span className="text-slate-400 text-[10px] mt-0.5">▪</span>
+                          <span className="font-medium text-slate-800">{sub.title}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  {/* Action buttons */}
-                  <div className="pt-4 flex flex-wrap items-center gap-4">
+                  {/* Actions */}
+                  <div className="pt-2 flex flex-wrap items-center gap-3">
                     <Link
                       href={`/services/${srv.slug}`}
-                      className="px-6 py-2.5 bg-[#0e2b5c] hover:bg-[#071937] text-white font-bold text-xs sm:text-sm rounded-lg shadow-sm transition-colors flex items-center gap-1.5"
+                      className="px-5 py-2.5 bg-[#081526] hover:bg-[#050E1A] text-white text-xs font-bold uppercase tracking-wider rounded transition-colors"
                     >
-                      <span>Full Service Page</span>
-                      <span>→</span>
+                      Technical Scope →
                     </Link>
                     <Link
                       href={`/contact-us?service=${encodeURIComponent(srv.title)}#enquiry`}
-                      className="px-6 py-2.5 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs sm:text-sm rounded-lg shadow-sm transition-colors"
+                      className="px-5 py-2.5 bg-[#C25E00] hover:bg-[#A34E00] text-white text-xs font-bold uppercase tracking-wider rounded transition-colors"
                     >
-                      Request Service Quote
+                      Request Quotation
                     </Link>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* PAN-India Assurance Strip */}
-      <section className="py-12 bg-slate-100 border-t border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-lg font-bold text-[#0e2b5c]">
-            Need immediate deployment or custom logistics routing?
-          </h3>
-          <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-xl mx-auto">
-            Our certified surveyors and logistics personnel are on standby 24/7 across all major Indian maritime hubs and inland rail terminals.
-          </p>
-          <div className="mt-4 flex justify-center gap-4">
-            <a
-              href={`tel:${COMPANY_INFO.contacts.phones[0].raw}`}
-              className="text-xs sm:text-sm font-bold text-[#0284c7] hover:underline"
-            >
-              Call Operations: {COMPANY_INFO.contacts.phones[0].display}
-            </a>
           </div>
         </div>
       </section>

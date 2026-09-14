@@ -7,66 +7,62 @@ import { COMPANY_INFO, SERVICES, BRANCH_OFFICES } from "@/lib/data/site-data";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-[#FAF9F6]">
       {/* Hero Section */}
-      <section className="relative bg-[#071937] text-white overflow-hidden min-h-[600px] lg:min-h-[680px] flex items-center">
-        {/* Background Image with Dark Overlay */}
+      <section className="relative bg-[#081526] text-white overflow-hidden min-h-[580px] lg:min-h-[640px] flex items-center border-b border-slate-800">
+        {/* Background Image with Muted Vignette */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero.jpg"
-            alt="Sarvoday Marine Seaport Operations"
+            alt="Commercial Cargo Vessel and Port Facility"
             fill
             priority
-            className="object-cover object-center opacity-30"
+            className="object-cover object-center opacity-25"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#071937] via-[#071937]/90 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#071937] via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#081526] via-[#081526]/90 to-transparent"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 relative z-10 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 relative z-10 w-full">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-500/20 border border-sky-400/40 text-sky-300 text-xs font-semibold mb-6">
-              <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
-              <span>Trusted Maritime Surveying & Logistics Partner Since 2014</span>
+            <div className="inline-block mb-4">
+              <span className="font-mono text-xs text-slate-300 uppercase tracking-wider border border-slate-700 bg-slate-900/60 px-3 py-1 rounded">
+                [ PAN-INDIA MOBILIZATION • EST. NOV 2014 ]
+              </span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-6">
-              Precision Marine Inspections & End-to-End <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-sky-200">Cabotage Logistics</span>
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight mb-6">
+              Precision Marine Inspections & Cabotage Logistics
             </h1>
 
-            <p className="text-base sm:text-lg text-slate-200 leading-relaxed mb-8 max-w-2xl font-normal">
-              Mobilizing 100+ certified marine surveyors, master mariners, and logistics coordinators PAN-India. Delivering rigorous vessel draft surveys, liquid cargo ullage, container audits, and seamless domestic freight transit.
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed mb-8 max-w-2xl font-normal">
+              Mobilizing 100+ certified marine surveyors, master mariners, and logistics coordinators across Indian maritime corridors. Providing legally sound vessel draft calculations, bulk cargo ullages, container audits, and seamless domestic freight.
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <Link
                 href="/contact-us#enquiry"
-                className="px-8 py-4 bg-[#ea580c] hover:bg-[#c2410c] text-white text-base font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 text-center flex items-center justify-center gap-2 group cursor-pointer"
+                className="px-8 py-3.5 bg-[#C25E00] hover:bg-[#A34E00] text-white text-xs font-bold uppercase tracking-wider rounded shadow-xs transition-colors text-center"
               >
-                <span>Request Inspection / Quote</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
+                Request Inspection / Quote
               </Link>
               <Link
                 href="/services"
-                className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white text-base font-bold rounded-xl border border-white/20 backdrop-blur-xs transition-all duration-200 text-center flex items-center justify-center gap-2"
+                className="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white text-xs font-bold uppercase tracking-wider rounded border border-white/20 transition-colors text-center"
               >
-                <span>Explore All Services</span>
+                Explore Services Catalog
               </Link>
             </div>
 
-            {/* Quick trust tags */}
-            <div className="mt-12 pt-8 border-t border-slate-700/60 grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs text-slate-300">
-              <div className="flex items-center gap-2">
-                <span className="text-sky-400 font-bold">✓</span>
-                <span>PAN-India Mobilization</span>
+            {/* Architectural Trust Tags */}
+            <div className="mt-12 pt-6 border-t border-slate-800 grid grid-cols-2 sm:grid-cols-3 gap-4 font-mono text-xs text-slate-300">
+              <div>
+                <span className="text-slate-400">AUDIT:</span> Legally Admissible
               </div>
-              <div className="flex items-center gap-2">
-                <span className="text-sky-400 font-bold">✓</span>
-                <span>Legally Admissible Reports</span>
+              <div>
+                <span className="text-slate-400">STAFF:</span> 100+ Trained Surveyors
               </div>
-              <div className="flex items-center gap-2">
-                <span className="text-sky-400 font-bold">✓</span>
-                <span>24/7 Field Availability</span>
+              <div>
+                <span className="text-slate-400">SCOPE:</span> 100% PAN-India Ports
               </div>
             </div>
           </div>
@@ -76,39 +72,37 @@ export default function HomePage() {
       {/* Trust & Stats Counter Banner */}
       <StatsBanner />
 
-      {/* Company Introduction / Value Proposition */}
+      {/* Company Introduction / Heritage */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <div className="inline-block">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#0284c7] bg-sky-50 px-3 py-1 rounded-full">
-                  About Sarvoday Marine
-                </span>
-              </div>
+              <span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500">
+                [ CORPORATE PROFILE ]
+              </span>
 
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0e2b5c] tracking-tight leading-snug">
-                Decade-Long Heritage in Shipping, Port Operations & Cargo Inspection
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-[#081526] tracking-tight leading-snug">
+                A Decade of Maritime Inspection & Domestic Freight Leadership
               </h2>
 
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                Founded in November 2014, <strong>Sarvoday Marine Services Pvt. Ltd.</strong> has established an unblemished reputation across Indian maritime gateways. Backed by a team of over 100 trained professionals, we mobilize skilled manpower PAN-India to ensure efficient project execution while maintaining the highest benchmarks of quality, safety, and operational excellence.
+              <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                Founded in November 2014, <strong>Sarvoday Marine Services Pvt. Ltd.</strong> has established an uncompromised reputation across Indian ports and rail corridors. Backed by a team of over 100 trained professionals, we mobilize certified personnel to ensure precision project execution while upholding rigorous standards of quality, safety, and operational transparency.
               </p>
 
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                Under the same trusted brand, our newly expanded <strong>Cabotage Logistics Solutions</strong> coordinates domestic and regional cargo transit—uniting coastal shipping, container rakes, and express trucking for end-to-end supply chain transparency.
+              <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                Under the same trusted Sarvoday umbrella, our <strong>Cabotage Logistics Solutions</strong> coordinates domestic and regional cargo transit—linking coastal shipping, container rakes, and freight trucking for end-to-end supply chain visibility.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
-                  <div className="text-xl font-bold text-[#0e2b5c] mb-1">Experienced Leadership</div>
-                  <p className="text-xs text-slate-500 leading-relaxed">
-                    Board of directors with deep maritime and logistics expertise driving operational strategy.
+                <div className="p-5 rounded border border-slate-200 bg-[#FAF9F6]">
+                  <div className="font-bold text-[#081526] text-sm mb-1">Experienced Board</div>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Decades of collective master mariner and port terminal management experience driving strategic decision-making.
                   </p>
                 </div>
-                <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
-                  <div className="text-xl font-bold text-[#0e2b5c] mb-1">Dedicated Teams</div>
-                  <p className="text-xs text-slate-500 leading-relaxed">
+                <div className="p-5 rounded border border-slate-200 bg-[#FAF9F6]">
+                  <div className="font-bold text-[#081526] text-sm mb-1">Skilled Manpower</div>
+                  <p className="text-xs text-slate-600 leading-relaxed">
                     Continuous technical grooming, safety audits, and strict compliance with international maritime codes.
                   </p>
                 </div>
@@ -117,16 +111,16 @@ export default function HomePage() {
               <div className="pt-2">
                 <Link
                   href="/about-us"
-                  className="inline-flex items-center gap-2 text-sm font-bold text-[#0284c7] hover:text-[#0e2b5c] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#1D70B8] hover:text-[#081526] transition-colors"
                 >
-                  <span>Learn more about our heritage & values</span>
+                  <span>Read Full Company Profile & Leadership</span>
                   <span>→</span>
                 </Link>
               </div>
             </div>
 
-            <div className="lg:col-span-6 relative">
-              <div className="relative h-[380px] sm:h-[450px] w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+            <div className="lg:col-span-6">
+              <div className="relative h-[380px] sm:h-[440px] w-full rounded-lg overflow-hidden border border-slate-200 shadow-sm bg-slate-900">
                 <Image
                   src="/images/about-operations.jpg"
                   alt="Sarvoday Marine Technical Surveyors"
@@ -134,102 +128,87 @@ export default function HomePage() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 sm:bottom-6 sm:-left-6 bg-[#0e2b5c] text-white p-6 rounded-2xl shadow-xl max-w-xs border border-sky-400/20">
-                <div className="text-3xl font-black text-sky-400">100+</div>
-                <div className="text-xs font-bold uppercase tracking-wider mt-1 text-slate-200">
-                  Skilled Surveyors & Engineers
-                </div>
-                <p className="text-xs text-slate-300 mt-2">
-                  Mobilized PAN-India at ports, ICDs, CFS yards, and industrial sidings.
-                </p>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Overview Grid */}
-      <section className="py-20 bg-slate-50 border-t border-slate-200/80">
+      {/* Services Grid Section */}
+      <section className="py-20 bg-[#F4F6F9] border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
             <div className="max-w-2xl">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#0284c7] bg-sky-100/80 px-3 py-1 rounded-full">
-                Comprehensive Capabilities
+              <span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500">
+                [ SERVICE DIVISIONS ]
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0e2b5c] mt-3 tracking-tight">
-                Our Core Inspection & Logistics Services
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-[#081526] mt-2 tracking-tight">
+                Our Core Technical Capabilities
               </h2>
-              <p className="text-sm sm:text-base text-slate-600 mt-2">
-                Delivering mathematically certified surveys, loss assessments, and seamless domestic cargo movement under one unified brand.
+              <p className="text-sm text-slate-600 mt-2">
+                Mathematically verified vessel draft surveys, liquid ullages, container terminal audits, and domestic cargo movement under one unified brand.
               </p>
             </div>
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-sm font-bold text-[#0e2b5c] hover:text-[#0284c7] shrink-0"
+              className="text-xs font-bold uppercase tracking-wider text-[#081526] hover:text-[#1D70B8] shrink-0"
             >
-              <span>View Full Catalog</span>
-              <span>→</span>
+              Full Service Catalog →
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {SERVICES.map((srv) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {SERVICES.map((srv, idx) => (
               <div
                 key={srv.id}
-                className="bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 border border-slate-200/80 flex flex-col group hover:-translate-y-1"
+                className="bg-white rounded-lg overflow-hidden border border-slate-200 flex flex-col justify-between hover:border-slate-400 transition-colors"
               >
-                <div className="relative h-52 w-full overflow-hidden bg-slate-100">
-                  <Image
-                    src={srv.image}
-                    alt={srv.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-3 left-4 right-4">
-                    <span className="text-xs font-bold uppercase tracking-wider text-sky-300 bg-sky-950/80 px-2.5 py-0.5 rounded-md backdrop-blur-xs">
-                      {srv.id === "cabotage-logistics" ? "Logistics Division" : "Marine Inspection"}
-                    </span>
+                <div>
+                  <div className="relative h-48 w-full overflow-hidden bg-slate-100">
+                    <Image
+                      src={srv.image}
+                      alt={srv.title}
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute top-3 left-3">
+                      <span className="font-mono text-[10px] uppercase text-white bg-[#081526]/90 px-2 py-0.5 rounded">
+                        DIV 0{idx + 1}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="p-6">
+                    <h3 className="text-base font-bold text-[#081526] mb-2 leading-snug">
+                      {srv.title}
+                    </h3>
+                    <p className="text-xs text-slate-600 mb-4 line-clamp-2 leading-relaxed">
+                      {srv.shortDescription}
+                    </p>
+
+                    <div className="space-y-1 mb-4 border-t border-slate-100 pt-3">
+                      {srv.subServices.slice(0, 3).map((sub, sIdx) => (
+                        <div key={sIdx} className="text-xs text-slate-500 flex items-center gap-1.5">
+                          <span className="text-slate-400 text-[10px]">▪</span>
+                          <span className="truncate">{sub.title}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
-                <div className="p-6 flex-grow flex flex-col">
-                  <h3 className="text-xl font-bold text-[#0e2b5c] group-hover:text-[#0284c7] transition-colors mb-2">
-                    {srv.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 mb-4 line-clamp-2 leading-relaxed">
-                    {srv.shortDescription}
-                  </p>
-
-                  <div className="space-y-1.5 mb-6 flex-grow">
-                    {srv.subServices.slice(0, 3).map((sub, sIdx) => (
-                      <div key={sIdx} className="flex items-center gap-2 text-xs text-slate-500">
-                        <span className="text-sky-500 font-bold">•</span>
-                        <span className="truncate">{sub.title}</span>
-                      </div>
-                    ))}
-                    {srv.subServices.length > 3 && (
-                      <div className="text-xs text-sky-600 font-medium pl-3">
-                        + {srv.subServices.length - 3} more specialized capabilities
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="pt-4 border-t border-slate-100 flex items-center justify-between mt-auto">
-                    <Link
-                      href={`/services/${srv.slug}`}
-                      className="text-xs sm:text-sm font-bold text-[#0e2b5c] group-hover:text-[#0284c7] flex items-center gap-1.5"
-                    >
-                      <span>Explore Details</span>
-                      <span>→</span>
-                    </Link>
-                    <Link
-                      href={`/contact-us?service=${encodeURIComponent(srv.title)}#enquiry`}
-                      className="text-xs font-bold text-[#ea580c] hover:underline"
-                    >
-                      Enquire Now
-                    </Link>
-                  </div>
+                <div className="px-6 py-3 bg-[#FAF9F6] border-t border-slate-100 flex items-center justify-between text-xs">
+                  <Link
+                    href={`/services/${srv.slug}`}
+                    className="font-bold text-[#081526] hover:text-[#1D70B8] transition-colors"
+                  >
+                    Technical Scope →
+                  </Link>
+                  <Link
+                    href={`/contact-us?service=${encodeURIComponent(srv.title)}#enquiry`}
+                    className="font-mono text-[11px] font-bold text-[#C25E00] hover:underline uppercase"
+                  >
+                    Enquire
+                  </Link>
                 </div>
               </div>
             ))}
@@ -237,70 +216,58 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4-Step Working Process Section */}
+      {/* 4-Step Working Process */}
       <ProcessSteps />
 
-      {/* PAN-India Network & Locations Showcase */}
-      <section className="py-20 bg-white border-t border-slate-200/80">
+      {/* PAN-India Branch Network Grid */}
+      <section className="py-20 bg-white border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-[#071937] to-[#0e2b5c] rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
-              <div className="lg:col-span-7 space-y-5">
-                <span className="text-xs font-bold uppercase tracking-wider text-sky-400 bg-sky-950/80 border border-sky-800 px-3 py-1 rounded-full">
-                  Strategic Network
+          <div className="bg-[#081526] rounded-lg p-8 sm:p-12 text-white border border-slate-800">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-7 space-y-4">
+                <span className="font-mono text-xs uppercase tracking-wider text-slate-400">
+                  [ STRATEGIC PRESENCE ]
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                  Head Office, Branch Network & PAN-India Reach
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                  Head Office & 16 Branch Hubs Across India
                 </h2>
-                <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-                  Headquartered at Rajula (Amreli, Gujarat) with 16 branch hubs located along India’s prime maritime belts. Our reach extends far beyond our physical offices: we mobilize certified surveyors to any port, terminal, or siding across the country.
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  Headquartered at Rajula (Amreli, Gujarat) with strategically deployed field stations across Western, Eastern, and North-Eastern maritime corridors. Certified personnel mobilize to any private berth or inland siding across the nation.
                 </p>
 
-                {/* State badges */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
                   {BRANCH_OFFICES.map((branch, bIdx) => (
-                    <div key={bIdx} className="bg-white/10 rounded-xl p-3 border border-white/10 backdrop-blur-xs">
-                      <div className="text-xs font-semibold text-sky-300">{branch.state}</div>
-                      <div className="text-lg font-black text-white">{branch.cities.length} {branch.cities.length === 1 ? "Hub" : "Hubs"}</div>
-                      <div className="text-[10px] text-slate-300 truncate mt-0.5">
-                        {branch.cities.slice(0, 2).join(", ")}...
-                      </div>
+                    <div key={bIdx} className="bg-slate-900 p-3 rounded border border-slate-800">
+                      <div className="font-mono text-[11px] text-slate-400">{branch.state}</div>
+                      <div className="text-base font-extrabold text-white mt-0.5">{branch.cities.length} Hubs</div>
                     </div>
                   ))}
                 </div>
 
-                <div className="pt-3">
+                <div className="pt-2">
                   <Link
                     href="/contact-us"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-sm rounded-xl shadow transition-colors cursor-pointer"
+                    className="inline-block px-6 py-2.5 bg-[#C25E00] hover:bg-[#A34E00] text-white text-xs font-bold uppercase tracking-wider rounded transition-colors"
                   >
-                    <span>View All Branch Locations & Coordinates</span>
-                    <span>→</span>
+                    View All Office Locations & Coordinates →
                   </Link>
                 </div>
               </div>
 
-              <div className="lg:col-span-5 bg-white/5 rounded-2xl p-6 border border-white/10 backdrop-blur-xs space-y-4">
-                <h3 className="text-lg font-bold text-white flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
-                  <span>Head Office Rajula</span>
-                </h3>
+              <div className="lg:col-span-5 bg-slate-900/90 rounded p-6 border border-slate-800 space-y-3">
+                <div className="font-mono text-[11px] text-slate-400 uppercase">
+                  REGISTERED HEADQUARTERS
+                </div>
+                <div className="text-sm font-bold text-white">
+                  Rajula — Gujarat
+                </div>
                 <p className="text-xs text-slate-300 leading-relaxed">
                   {COMPANY_INFO.contacts.headOffice.address}
                 </p>
-                <div className="space-y-2 pt-2 text-xs border-t border-white/10">
-                  <div className="flex items-center justify-between text-slate-300">
-                    <span>Operations Director:</span>
-                    <span className="font-semibold text-white">Rajkumar Mall</span>
-                  </div>
-                  <div className="flex items-center justify-between text-slate-300">
-                    <span>General Manager:</span>
-                    <span className="font-semibold text-white">Harshit Gajjar</span>
-                  </div>
-                  <div className="flex items-center justify-between text-slate-300">
-                    <span>24/7 Hotline:</span>
-                    <span className="font-semibold text-sky-400">{COMPANY_INFO.contacts.phones[0].display}</span>
-                  </div>
+                <div className="pt-2 border-t border-slate-800 text-xs space-y-1 text-slate-400">
+                  <div>Director: <span className="text-slate-200 font-semibold">Rajkumar Mall</span></div>
+                  <div>GM Operations: <span className="text-slate-200 font-semibold">Harshit Gajjar</span></div>
+                  <div>24/7 Desk: <span className="text-white font-mono">{COMPANY_INFO.contacts.phones[0].display}</span></div>
                 </div>
               </div>
             </div>
@@ -308,21 +275,24 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Call to Action Banner */}
-      <section className="py-16 bg-[#ea580c] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
-          <div className="max-w-2xl">
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-              Ready to Schedule an Inspection or Plan Cargo Movement?
+      {/* Corporate Call to Action */}
+      <section className="py-14 bg-[#050E1A] text-white border-t border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <div>
+            <div className="font-mono text-[11px] uppercase tracking-wider text-slate-400">
+              DISPATCH & BOOKING HOTLINE
+            </div>
+            <h2 className="text-xl sm:text-2xl font-bold mt-1">
+              Ready to Schedule an Inspection or Domestic Transit?
             </h2>
-            <p className="text-sm text-orange-100 mt-2">
-              Our duty officers and surveyors are available 24/7 for prompt vessel attendance and transport quotes.
+            <p className="text-xs text-slate-400 mt-1">
+              Our technical coordinators are available 24/7 for prompt vessel attendance and transport quotations.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
+          <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
             <Link
               href="/contact-us#enquiry"
-              className="px-8 py-3.5 bg-white text-[#0e2b5c] font-bold text-sm rounded-xl shadow hover:bg-slate-100 transition-colors"
+              className="px-6 py-3 bg-[#C25E00] hover:bg-[#A34E00] text-white text-xs font-bold uppercase tracking-wider rounded transition-colors"
             >
               Get Instant Quotation
             </Link>
@@ -330,9 +300,9 @@ export default function HomePage() {
               href={`https://wa.me/${COMPANY_INFO.contacts.whatsapp.number.replace("+", "")}?text=${encodeURIComponent(COMPANY_INFO.contacts.whatsapp.defaultMessage)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3.5 bg-[#071937] text-white font-bold text-sm rounded-xl hover:bg-slate-900 transition-colors flex items-center gap-2"
+              className="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold uppercase tracking-wider rounded border border-slate-700 transition-colors"
             >
-              <span>Chat on WhatsApp</span>
+              WhatsApp Desk
             </a>
           </div>
         </div>

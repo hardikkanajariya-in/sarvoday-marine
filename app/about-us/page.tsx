@@ -13,44 +13,43 @@ export const metadata: Metadata = {
 
 export default function AboutUsPage() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-[#FAF9F6]">
       {/* Subpage Header Banner */}
-      <section className="bg-[#071937] text-white py-16 sm:py-20 relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero.jpg"
-            alt="Sarvoday Marine Seaport"
-            fill
-            priority
-            className="object-cover object-center opacity-25"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#071937] via-[#071937]/90 to-transparent"></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="bg-[#081526] text-white py-14 sm:py-16 border-b border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-wider text-sky-400 bg-sky-950/80 border border-sky-800 px-3 py-1 rounded-full">
-              Heritage & Excellence Since 2014
-            </span>
-            <h1 className="text-3xl sm:text-5xl font-black text-white mt-4 tracking-tight">
+            <div className="flex items-center gap-2 text-xs font-mono text-slate-400 mb-3">
+              <Link href="/" className="hover:text-white transition-colors">HOME</Link>
+              <span>/</span>
+              <span className="text-[#1D70B8]">ABOUT-US</span>
+            </div>
+
+            <div className="inline-block mb-3">
+              <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 border border-slate-700 px-2.5 py-1 rounded">
+                [ ESTABLISHED NOVEMBER 2014 ]
+              </span>
+            </div>
+
+            <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
               About Sarvoday Marine Services
             </h1>
-            <p className="text-base sm:text-lg text-slate-200 mt-4 leading-relaxed">
-              Committed to setting benchmark standards in maritime surveying, cargo inspections, and nationwide domestic logistics.
+            <p className="text-sm sm:text-base text-slate-300 mt-4 leading-relaxed">
+              Setting standards in maritime technical inspections, independent loss evaluations, and nationwide cabotage logistics.
             </p>
-            {/* Quick in-page anchor links */}
-            <div className="flex flex-wrap gap-2 pt-6 text-xs font-semibold">
-              <a href="#company-profile" className="px-3 py-1.5 bg-white/10 hover:bg-white/20 rounded-lg text-slate-200 transition-colors">
-                Company Profile
+
+            {/* In-page navigation anchors */}
+            <div className="flex flex-wrap gap-2 pt-6 font-mono text-[11px]">
+              <a href="#company-profile" className="px-3 py-1 bg-slate-900 border border-slate-700 text-slate-300 hover:text-white rounded transition-colors">
+                01. Company Profile
               </a>
-              <a href="#leadership-team" className="px-3 py-1.5 bg-white/10 hover:bg-white/20 rounded-lg text-slate-200 transition-colors">
-                Leadership & Team
+              <a href="#leadership-team" className="px-3 py-1 bg-slate-900 border border-slate-700 text-slate-300 hover:text-white rounded transition-colors">
+                02. Leadership & Team
               </a>
-              <a href="#vision-values" className="px-3 py-1.5 bg-white/10 hover:bg-white/20 rounded-lg text-slate-200 transition-colors">
-                Vision & Values
+              <a href="#vision-values" className="px-3 py-1 bg-slate-900 border border-slate-700 text-slate-300 hover:text-white rounded transition-colors">
+                03. Vision & Values
               </a>
-              <a href="#our-expertise" className="px-3 py-1.5 bg-white/10 hover:bg-white/20 rounded-lg text-slate-200 transition-colors">
-                Our Expertise
+              <a href="#our-expertise" className="px-3 py-1 bg-slate-900 border border-slate-700 text-slate-300 hover:text-white rounded transition-colors">
+                04. Our Expertise
               </a>
             </div>
           </div>
@@ -61,33 +60,33 @@ export default function AboutUsPage() {
       <StatsBanner />
 
       {/* 1. Company Profile Section */}
-      <section id="company-profile" className="py-20 bg-white scroll-mt-20">
+      <section id="company-profile" className="py-16 sm:py-20 bg-white scroll-mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#0284c7] bg-sky-50 px-3 py-1 rounded-full">
-                1. Company Profile
+              <span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500">
+                [ 01. COMPANY PROFILE ]
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0e2b5c] tracking-tight leading-snug">
-                Founded in November 2014: A Decade of Marine Integrity
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#081526] tracking-tight leading-snug">
+                Founded November 2014: A Decade of Uncompromising Marine Integrity
               </h2>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                <strong>Sarvoday Marine Services Pvt. Ltd.</strong> was incorporated with a decisive vision: to deliver mathematically rigorous, transparent, and legally sound marine surveys across Indian ports and industrial corridors.
+              <p className="text-sm text-slate-700 leading-relaxed">
+                <strong>Sarvoday Marine Services Pvt. Ltd.</strong> was established to provide the Indian maritime trade with mathematically accurate, legally admissible, and impartial vessel survey documentation.
               </p>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                Over the past decade, we have grown from our registered base in Rajula (Amreli, Gujarat) to operate a nationwide network spanning 16 strategic branch hubs across Gujarat, Maharashtra, West Bengal, and Tripura. Today, backed by a workforce of over 100 trained professionals, we conduct thousands of draft surveys, liquid cargo ullages, container inspections, and heavy project cargo lashings every year.
+              <p className="text-sm text-slate-700 leading-relaxed">
+                Over the past decade, our operations have grown from our registered headquarters in Rajula (Amreli, Gujarat) to encompass 16 strategic branch hubs across Gujarat, Maharashtra, West Bengal, and Tripura. Today, backed by a trained team of over 100 professionals, we mobilize certified surveyors to every major and minor seaport, Container Freight Station (CFS), and inland container depot across India.
               </p>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                To serve evolving trade demands, we introduced <strong>Cabotage Logistics Solutions</strong> under the same trusted Sarvoday brand, offering our clients seamless domestic and regional multimodal freight coordination.
+              <p className="text-sm text-slate-700 leading-relaxed">
+                To serve evolving domestic trade lanes, we introduced <strong>Cabotage Logistics Solutions</strong> under the same trusted Sarvoday brand, linking coastal vessel services, rail rakes, and freight trucking into a cohesive transport offering.
               </p>
 
-              <div className="border-l-4 border-[#0284c7] pl-4 py-1 italic text-slate-700 text-sm bg-slate-50 rounded-r-lg">
+              <div className="border-l-2 border-[#081526] pl-4 py-1 text-slate-700 text-xs sm:text-sm bg-[#FAF9F6] font-medium leading-relaxed">
                 &ldquo;We mobilize skilled manpower PAN-India, ensuring efficient project execution while maintaining high standards of quality, safety, and operational excellence.&rdquo;
               </div>
             </div>
 
             <div className="lg:col-span-6">
-              <div className="relative h-[380px] sm:h-[450px] w-full rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+              <div className="relative h-[360px] sm:h-[420px] w-full rounded-lg overflow-hidden border border-slate-200 shadow-sm bg-slate-900">
                 <Image
                   src="/images/about-operations.jpg"
                   alt="Sarvoday Marine Technical Personnel"
@@ -101,83 +100,79 @@ export default function AboutUsPage() {
       </section>
 
       {/* 2. Leadership & Team Section */}
-      <section id="leadership-team" className="py-20 bg-slate-50 border-t border-slate-200/80 scroll-mt-20">
+      <section id="leadership-team" className="py-16 sm:py-20 bg-[#F4F6F9] border-t border-slate-200 scroll-mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#0284c7] bg-sky-100/80 px-3 py-1 rounded-full">
-              2. Leadership & Team
+          <div className="max-w-3xl mb-12">
+            <span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500">
+              [ 02. LEADERSHIP & TEAM ]
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0e2b5c] mt-3 tracking-tight">
-              Guided by Industry Veterans, Executed by Specialists
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#081526] mt-2 tracking-tight">
+              Guided by Industry Veterans, Executed by Certified Specialists
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 mt-3">
-              Our organization combines strategic executive leadership with rigorous field training to match every assignment with certified technical capabilities.
+            <p className="text-sm text-slate-600 mt-2">
+              Our organization combines seasoned maritime executive strategy with rigorous field training to match every survey assignment with certified technical capabilities.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
             {/* Leadership Card 1 */}
-            <div className="bg-white rounded-2xl p-8 shadow-xs border border-slate-200/80 flex flex-col justify-between">
+            <div className="bg-white rounded-lg p-8 border border-slate-200 flex flex-col justify-between">
               <div>
-                <div className="w-14 h-14 rounded-2xl bg-[#0e2b5c] text-white flex items-center justify-center font-black text-xl mb-6 shadow-md">
-                  RM
+                <div className="font-mono text-xs font-bold uppercase text-[#1D70B8] mb-1">
+                  BOARD OF DIRECTORS
                 </div>
-                <div className="text-xs font-bold uppercase tracking-wider text-sky-600">Director</div>
-                <h3 className="text-2xl font-bold text-[#0e2b5c] mt-1">Rajkumar Mall</h3>
-                <p className="text-xs text-slate-500 mt-1 mb-4">{COMPANY_INFO.contacts.emails[1].email}</p>
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  Directing long-term corporate vision, strategic maritime alliances, and nationwide port operations. Bringing deep industry acumen in marine casualty assessment and complex logistics corridors.
+                <h3 className="text-xl font-bold text-[#081526]">Rajkumar Mall</h3>
+                <div className="font-mono text-xs text-slate-500 mt-0.5 mb-4">Director</div>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Driving strategic corporate governance, maritime industry alliances, and nationwide port operational capabilities. Bringing deep expertise in marine casualty investigations, shipboard audits, and freight network development.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-4 text-xs font-semibold text-slate-700">
-                <a href="tel:+919723599247" className="text-[#0284c7] hover:underline flex items-center gap-1">
-                  📞 +91 97235 99247
-                </a>
+              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-mono">
+                <span className="text-slate-500">{COMPANY_INFO.contacts.emails[1].email}</span>
+                <span className="text-slate-700 font-bold">{COMPANY_INFO.contacts.phones[0].display}</span>
               </div>
             </div>
 
             {/* Leadership Card 2 */}
-            <div className="bg-white rounded-2xl p-8 shadow-xs border border-slate-200/80 flex flex-col justify-between">
+            <div className="bg-white rounded-lg p-8 border border-slate-200 flex flex-col justify-between">
               <div>
-                <div className="w-14 h-14 rounded-2xl bg-[#0284c7] text-white flex items-center justify-center font-black text-xl mb-6 shadow-md">
-                  HG
+                <div className="font-mono text-xs font-bold uppercase text-[#1D70B8] mb-1">
+                  EXECUTIVE OPERATIONS
                 </div>
-                <div className="text-xs font-bold uppercase tracking-wider text-sky-600">General Manager</div>
-                <h3 className="text-2xl font-bold text-[#0e2b5c] mt-1">Harshit Gajjar</h3>
-                <p className="text-xs text-slate-500 mt-1 mb-4">{COMPANY_INFO.contacts.emails[0].email}</p>
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  Leading daily operational execution, field surveyor deployment, technical quality auditing, and client relationship management across all Indian port terminals and CFS facilities.
+                <h3 className="text-xl font-bold text-[#081526]">Harshit Gajjar</h3>
+                <div className="font-mono text-xs text-slate-500 mt-0.5 mb-4">General Manager</div>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Leading daily operational execution, field surveyor deployment, client reporting accuracy, and safety compliance across all Indian port terminals, container yards, and industrial sidings.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-4 text-xs font-semibold text-slate-700">
-                <a href="tel:+917043230841" className="text-[#0284c7] hover:underline flex items-center gap-1">
-                  📞 +91 70432 30841
-                </a>
+              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-mono">
+                <span className="text-slate-500">{COMPANY_INFO.contacts.emails[0].email}</span>
+                <span className="text-slate-700 font-bold">{COMPANY_INFO.contacts.phones[1].display}</span>
               </div>
             </div>
           </div>
 
           {/* Dedicated Teams Structure */}
-          <div className="bg-white rounded-2xl p-8 border border-slate-200/80">
-            <h3 className="text-xl font-bold text-[#0e2b5c] mb-3">
+          <div className="bg-white rounded-lg p-8 border border-slate-200">
+            <h3 className="text-lg font-bold text-[#081526] mb-2">
               Dedicated Teams: 100+ Trained Field Professionals
             </h3>
-            <p className="text-sm text-slate-600 leading-relaxed mb-6">
-              Employee skills are systematically evaluated and matched to specific operational responsibilities. Regular technical training, safety grooming sessions, and ISO/SOLAS refresher programs keep our teams sharp, adaptable, and compliant with the latest maritime regulations.
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+              Employee competencies are evaluated and matched to specific operational responsibilities. Regular training sessions, safety workshops, and statutory compliance updates keep our surveyors prepared for demanding field conditions.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
-                <div className="font-bold text-[#0e2b5c] text-sm mb-1">Master Mariners & Navigators</div>
-                <p className="text-xs text-slate-500">Expertise in vessel displacement, trim calculations, and hatch ultrasonic testing.</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 font-sans">
+              <div className="p-4 rounded border border-slate-200 bg-[#FAF9F6]">
+                <div className="font-bold text-[#081526] text-xs uppercase mb-1">Master Mariners & Navigators</div>
+                <p className="text-xs text-slate-600">Displacement surveys, vessel trim calculations, stability assessments, and hatch cover tightness testing.</p>
               </div>
-              <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
-                <div className="font-bold text-[#0e2b5c] text-sm mb-1">Liquid Cargo Surveyors</div>
-                <p className="text-xs text-slate-500">Certified gauging of crude, chemicals, and edible oils with API MPMS compliance.</p>
+              <div className="p-4 rounded border border-slate-200 bg-[#FAF9F6]">
+                <div className="font-bold text-[#081526] text-xs uppercase mb-1">Liquid Cargo Technicians</div>
+                <p className="text-xs text-slate-600">Calibrated ullage gauging, fuel density testing, and chemical wall-wash analysis per API MPMS standards.</p>
               </div>
-              <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
-                <div className="font-bold text-[#0e2b5c] text-sm mb-1">Container & Rail Inspectors</div>
-                <p className="text-xs text-slate-500">IICL-trained container inspectors, reefer PTI specialists, and rail rake lashing officers.</p>
+              <div className="p-4 rounded border border-slate-200 bg-[#FAF9F6]">
+                <div className="font-bold text-[#081526] text-xs uppercase mb-1">Container & Rail Inspectors</div>
+                <p className="text-xs text-slate-600">IICL-aligned container inspections, reefer machinery PTI, stuffing audits, and rail flat lashing verification.</p>
               </div>
             </div>
           </div>
@@ -185,44 +180,43 @@ export default function AboutUsPage() {
       </section>
 
       {/* 3. Vision & Values Section */}
-      <section id="vision-values" className="py-20 bg-white border-t border-slate-200/80 scroll-mt-20">
+      <section id="vision-values" className="py-16 sm:py-20 bg-white border-t border-slate-200 scroll-mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#0284c7] bg-sky-50 px-3 py-1 rounded-full">
-              3. Vision & Core Values
+          <div className="max-w-3xl mb-12">
+            <span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500">
+              [ 03. VISION & VALUES ]
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0e2b5c] mt-3 tracking-tight">
-              Principles That Anchor Our Organization
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#081526] mt-2 tracking-tight">
+              Foundational Principles
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 mt-3">
-              Guided by an unwavering commitment to transparent marine inspections and reliable cargo logistics.
+            <p className="text-sm text-slate-600 mt-2">
+              Guided by a commitment to objective reporting, operational safety, and sustainable corporate growth.
             </p>
           </div>
 
-          {/* Vision Statement Banner */}
-          <div className="bg-gradient-to-r from-[#071937] to-[#0e2b5c] text-white rounded-2xl p-8 sm:p-10 mb-12 shadow-lg">
-            <div className="max-w-3xl">
-              <span className="text-xs font-bold uppercase tracking-wider text-sky-400">Our Corporate Vision</span>
-              <h3 className="text-2xl sm:text-3xl font-extrabold mt-2 leading-relaxed text-slate-100">
-                &ldquo;{COMPANY_INFO.vision}&rdquo;
-              </h3>
+          {/* Vision Box */}
+          <div className="bg-[#081526] text-white rounded-lg p-8 mb-10 border border-slate-800">
+            <span className="font-mono text-[10px] uppercase text-slate-400">CORPORATE VISION STATEMENT</span>
+            <div className="text-lg sm:text-xl font-medium mt-2 text-slate-100 leading-relaxed font-serif italic">
+              &ldquo;{COMPANY_INFO.vision}&rdquo;
             </div>
           </div>
 
-          {/* Core Values Cards */}
+          {/* Core Values */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {COMPANY_INFO.coreValues.map((val, idx) => (
               <div
                 key={idx}
-                className="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:border-sky-300 hover:shadow-md transition-all"
+                className="bg-[#FAF9F6] rounded-lg p-6 border border-slate-200 flex flex-col justify-between"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#0284c7] text-white flex items-center justify-center font-bold text-sm mb-4">
-                  0{idx + 1}
+                <div>
+                  <div className="font-mono text-xs text-[#1D70B8] font-bold mb-2">
+                    0{idx + 1}. {val.title.toUpperCase()}
+                  </div>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    {val.description}
+                  </p>
                 </div>
-                <h4 className="text-lg font-bold text-[#0e2b5c] mb-2">{val.title}</h4>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  {val.description}
-                </p>
               </div>
             ))}
           </div>
@@ -230,42 +224,57 @@ export default function AboutUsPage() {
       </section>
 
       {/* 4. Our Expertise Section */}
-      <section id="our-expertise" className="py-20 bg-slate-50 border-t border-slate-200/80 scroll-mt-20">
+      <section id="our-expertise" className="py-16 sm:py-20 bg-[#F4F6F9] border-t border-slate-200 scroll-mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#0284c7] bg-sky-100/80 px-3 py-1 rounded-full">
-              4. Our Expertise
+          <div className="max-w-3xl mb-12">
+            <span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500">
+              [ 04. OUR EXPERTISE ]
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0e2b5c] mt-3 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#081526] mt-2 tracking-tight">
               PAN-India Technical Capabilities
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 mt-3">
+            <p className="text-sm text-slate-600 mt-2">
               Combining technical rigor with extensive geographic reach across all maritime corridors.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs">
-              <div className="text-3xl mb-3">⚓</div>
-              <h3 className="text-lg font-bold text-[#0e2b5c] mb-2">Marine & Bulk Cargo Surveying</h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Expert draft surveys, barge sounding calibrations, ultrasonic hatch weather-tightness verification, and P&I condition surveys across Indian anchorages and jetties.
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Custom SVG Icon 1: Marine Surveying */}
+            <div className="bg-white rounded-lg p-6 border border-slate-200">
+              <div className="w-10 h-10 rounded bg-[#EBF3FA] text-[#1D70B8] flex items-center justify-center mb-4">
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                </svg>
+              </div>
+              <h3 className="text-base font-bold text-[#081526] mb-2">Marine & Bulk Surveying</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Draft surveys, barge calibration soundings, ultrasonic hatch weather-tightness verification, and P&I condition surveys across all Indian anchorages.
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs">
-              <div className="text-3xl mb-3">🧪</div>
-              <h3 className="text-lg font-bold text-[#0e2b5c] mb-2">Liquid Petroleum & Chemical Survey</h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Calibrated ullage gauging, density verification, shore-vs-ship variance reconciliation, and wall-wash cleanliness tests compliant with global petrochemical standards.
+            {/* Custom SVG Icon 2: Liquid Cargo */}
+            <div className="bg-white rounded-lg p-6 border border-slate-200">
+              <div className="w-10 h-10 rounded bg-[#EBF3FA] text-[#1D70B8] flex items-center justify-center mb-4">
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.942A6.75 6.75 0 0112 18a6.75 6.75 0 01-6.23-1.758L5 14.5m14.8.8l.2 1.2a2.25 2.25 0 01-2.25 2.5H6.25a2.25 2.25 0 01-2.25-2.5l.2-1.2" />
+                </svg>
+              </div>
+              <h3 className="text-base font-bold text-[#081526] mb-2">Liquid Petroleum & Chemicals</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Calibrated ullage surveys, temperature corrections, shore-vs-vessel reconciliation, and chemical tank wall-wash inspections per ASTM and API codes.
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs">
-              <div className="text-3xl mb-3">🚢</div>
-              <h3 className="text-lg font-bold text-[#0e2b5c] mb-2">Cabotage & Domestic Freight Transit</h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Connecting Indian ports and inland industrial centers through seamless coastal vessel charters, rail freight rakes, and container trucking under the single Sarvoday brand.
+            {/* Custom SVG Icon 3: Cabotage Logistics */}
+            <div className="bg-white rounded-lg p-6 border border-slate-200">
+              <div className="w-10 h-10 rounded bg-[#EBF3FA] text-[#1D70B8] flex items-center justify-center mb-4">
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.25V5.25A2.25 2.25 0 0012 3H3.75A2.25 2.25 0 001.5 5.25v9" />
+                </svg>
+              </div>
+              <h3 className="text-base font-bold text-[#081526] mb-2">Domestic Cabotage Freight</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Seamless domestic cargo movement uniting coastal feeder vessels, container flat rakes, and regional road transport under the single Sarvoday brand.
               </p>
             </div>
           </div>
@@ -273,10 +282,9 @@ export default function AboutUsPage() {
           <div className="mt-12 text-center">
             <Link
               href="/contact-us#enquiry"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-sm rounded-xl shadow-lg transition-colors"
+              className="inline-block px-8 py-3.5 bg-[#C25E00] hover:bg-[#A34E00] text-white text-xs font-bold uppercase tracking-wider rounded transition-colors"
             >
-              <span>Connect with Our Technical Team</span>
-              <span>→</span>
+              Contact Operations Desk →
             </Link>
           </div>
         </div>

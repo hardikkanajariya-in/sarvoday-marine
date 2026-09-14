@@ -19,193 +19,184 @@ export default function ServiceDetailTemplate({ service }: ServiceDetailTemplate
   const handleSidebarWhatsApp = (e: React.FormEvent) => {
     e.preventDefault();
     if (!fullName || !phone) {
-      alert("Please provide your name and phone number.");
+      alert("Please enter your name and contact phone number.");
       return;
     }
     const message =
-      `*Enquiry for ${service.title}*\n` +
+      `*Service Request: ${service.title}*\n` +
       `*Name:* ${fullName}\n` +
       `*Phone:* ${phone}\n` +
-      `*Port/Location:* ${port || "PAN-India"}\n` +
-      `*Notes:* ${notes || "Requesting prompt quote and availability."}`;
+      `*Port / Location:* ${port || "PAN-India"}\n` +
+      `*Technical Notes:* ${notes || "Requesting survey schedule & quotation."}`;
     const waUrl = `https://wa.me/${COMPANY_INFO.contacts.whatsapp.number.replace("+", "")}?text=${encodeURIComponent(message)}`;
     window.open(waUrl, "_blank");
     setSubmitted(true);
   };
 
   return (
-    <div className="flex flex-col">
-      {/* Service Hero Banner */}
-      <section className="bg-[#071937] text-white py-16 sm:py-20 relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src={service.image}
-            alt={service.title}
-            fill
-            priority
-            className="object-cover object-center opacity-25"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#071937] via-[#071937]/90 to-transparent"></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div className="flex flex-col bg-[#FAF9F6]">
+      {/* Service Header */}
+      <section className="bg-[#081526] text-white py-14 sm:py-16 border-b border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            {/* Breadcrumb */}
-            <div className="flex items-center gap-2 text-xs font-semibold text-sky-400 mb-4">
-              <Link href="/" className="hover:underline">Home</Link>
+            {/* Breadcrumb Navigation */}
+            <div className="flex items-center gap-2 text-xs font-mono text-slate-400 mb-4">
+              <Link href="/" className="hover:text-white transition-colors">HOME</Link>
               <span>/</span>
-              <Link href="/services" className="hover:underline">Services</Link>
+              <Link href="/services" className="hover:text-white transition-colors">SERVICES</Link>
               <span>/</span>
-              <span className="text-slate-300">{service.title}</span>
+              <span className="text-[#1D70B8]">{service.slug.toUpperCase()}</span>
             </div>
 
-            <span className="text-xs font-bold uppercase tracking-wider text-sky-400 bg-sky-950/80 border border-sky-800 px-3 py-1 rounded-full">
-              {service.id === "cabotage-logistics" ? "Domestic Freight Solutions" : "Marine Survey & Technical Audit"}
-            </span>
+            <div className="inline-block mb-3">
+              <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 border border-slate-700 px-2.5 py-1 rounded">
+                {service.id === "cabotage-logistics" ? "LOGISTICS & INTERMODAL DIVISION" : "MARITIME TECHNICAL SURVEY"}
+              </span>
+            </div>
 
-            <h1 className="text-3xl sm:text-5xl font-black text-white mt-4 tracking-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
               {service.title}
             </h1>
 
-            <p className="text-base sm:text-lg text-slate-200 mt-4 leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-300 mt-4 leading-relaxed max-w-2xl">
               {service.shortDescription}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Main Content Area */}
-      <section className="py-16 sm:py-20 bg-white">
+      {/* Main Two-Column Architectural Layout */}
+      <section className="py-14 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            {/* Left Main Content */}
-            <div className="lg:col-span-8 space-y-12">
-              {/* Featured Image */}
-              <div className="relative h-[320px] sm:h-[420px] w-full rounded-2xl overflow-hidden shadow-lg">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            {/* Left Content Column */}
+            <div className="lg:col-span-8 space-y-10">
+              {/* Featured Asset View */}
+              <div className="relative h-[300px] sm:h-[400px] w-full rounded-lg overflow-hidden border border-slate-200 bg-slate-900">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
+                  priority
                   className="object-cover"
                 />
               </div>
 
-              {/* Comprehensive Description */}
-              <div className="space-y-4">
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#0e2b5c]">
-                  Overview & Technical Scope
+              {/* Technical Scope Statement */}
+              <div className="bg-white p-8 rounded-lg border border-slate-200 space-y-4">
+                <h2 className="text-xl sm:text-2xl font-bold text-[#081526] tracking-tight">
+                  Scope of Technical Operations
                 </h2>
-                <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
+                <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
                   {service.fullDescription}
                 </p>
               </div>
 
-              {/* Key Features / Highlights */}
-              <div className="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200/80">
-                <h3 className="text-lg font-bold text-[#0e2b5c] mb-4">
-                  Operational Benchmarks & Accreditations
+              {/* Accreditations & Field Standards */}
+              <div className="bg-white p-8 rounded-lg border border-slate-200">
+                <h3 className="text-sm font-mono uppercase tracking-wider text-slate-400 mb-4">
+                  [ STATUTORY & COMPLIANCE FRAMEWORK ]
                 </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {service.features.map((feat, fIdx) => (
-                    <div key={fIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
-                      <span className="w-5 h-5 rounded-full bg-sky-100 text-[#0284c7] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
-                        ✓
-                      </span>
-                      <span>{feat}</span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {service.features.map((feat, idx) => (
+                    <div key={idx} className="flex items-start gap-3 text-xs sm:text-sm text-slate-700">
+                      <span className="text-[#1D70B8] font-bold mt-0.5">▪</span>
+                      <span className="leading-snug">{feat}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Sub-Services Breakdown (From Excel Link Structure) */}
+              {/* Sub-Services Technical Matrix */}
               <div>
                 <div className="mb-6">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#0284c7] bg-sky-50 px-3 py-1 rounded-full">
-                    Specialized Sub-Services
+                  <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400">
+                    [ SUB-SERVICE MATRIX ]
                   </span>
-                  <h3 className="text-2xl font-bold text-[#0e2b5c] mt-2">
-                    Detailed Service Capabilities
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#081526] mt-1">
+                    Detailed Verification Capabilities
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-500 mt-1">
-                    Executed strictly in compliance with international maritime conventions and classification society guidelines.
-                  </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   {service.subServices.map((sub, sIdx) => (
                     <div
                       key={sIdx}
-                      className="bg-white rounded-xl p-6 border border-slate-200 shadow-xs hover:border-sky-300 hover:shadow-md transition-all flex flex-col"
+                      className="bg-white rounded-lg p-6 border border-slate-200 flex flex-col justify-between hover:border-slate-400 transition-colors"
                     >
-                      <div className="flex items-center gap-3 mb-3">
-                        <span className="w-8 h-8 rounded-lg bg-[#0e2b5c] text-white flex items-center justify-center font-bold text-xs">
-                          0{sIdx + 1}
-                        </span>
-                        <h4 className="text-base font-bold text-[#0e2b5c]">
+                      <div>
+                        <div className="flex items-center justify-between mb-3 border-b border-slate-100 pb-2">
+                          <span className="text-[11px] font-mono text-[#1D70B8] font-bold">
+                            SPEC {sIdx + 1 < 10 ? `0${sIdx + 1}` : sIdx + 1}
+                          </span>
+                          <span className="text-[10px] font-mono text-slate-400">
+                            STANDARD PROTOCOL
+                          </span>
+                        </div>
+                        <h4 className="text-sm font-bold text-[#081526] mb-2 leading-snug">
                           {sub.title}
                         </h4>
+                        <p className="text-xs text-slate-600 leading-relaxed">
+                          {sub.description}
+                        </p>
                       </div>
-                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed flex-grow">
-                        {sub.description}
-                      </p>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* PAN-India Mobilization Notice */}
-              <div className="bg-sky-50 rounded-2xl p-6 border border-sky-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+              {/* PAN-India Notice */}
+              <div className="bg-[#EBF3FA] rounded-lg p-6 border border-sky-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div>
-                  <h4 className="font-bold text-[#0e2b5c] text-sm">
-                    Prompt Mobilization Across All Indian Ports
-                  </h4>
-                  <p className="text-xs text-slate-600 mt-1">
-                    Whether in Mundra, Hazira, JNPT Mumbai, Haldia, or inland ICDs, our surveyors reach the berth promptly upon booking.
+                  <div className="text-xs font-mono font-bold uppercase text-[#1D70B8]">
+                    [ IMMEDIATE BERTH DISPATCH ]
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-800 mt-1">
+                    Certified field surveyors mobilize on short notice across Mundra, Hazira, JNPT, Haldia, and all commercial Indian ports.
                   </p>
                 </div>
                 <Link
                   href="/contact-us#enquiry"
-                  className="px-5 py-2.5 bg-[#0e2b5c] text-white text-xs font-bold rounded-lg shrink-0 hover:bg-[#071937] transition-colors"
+                  className="px-5 py-2 bg-[#081526] hover:bg-[#050E1A] text-white text-xs font-bold uppercase tracking-wider rounded shrink-0 transition-colors"
                 >
-                  Book Surveyor
+                  Book Attendance
                 </Link>
               </div>
             </div>
 
-            {/* Right Sticky Sidebar */}
-            <div className="lg:col-span-4 space-y-8">
-              {/* Quick Quote Form Card */}
-              <div className="bg-slate-50 rounded-2xl p-6 sm:p-7 border border-slate-200/80 sticky top-28 shadow-xs">
-                <div className="mb-4">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#ea580c] bg-orange-100/80 px-2.5 py-0.5 rounded-full">
-                    Enquiry Now
+            {/* Right Sticky Column */}
+            <div className="lg:col-span-4 space-y-6">
+              {/* Technical Request Sidebar */}
+              <div className="bg-white rounded-lg p-6 sm:p-7 border border-slate-200 sticky top-28 shadow-xs">
+                <div className="mb-5 border-b border-slate-100 pb-3">
+                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#C25E00]">
+                    DIRECT BOOKING DESK
                   </span>
-                  <h3 className="text-lg font-bold text-[#0e2b5c] mt-2">
-                    Request Quotation for {service.title}
+                  <h3 className="text-base font-bold text-[#081526] mt-1">
+                    Request Survey Attendance
                   </h3>
-                  <p className="text-xs text-slate-500 mt-1">
-                    Direct connection to our 24/7 technical operations desk.
+                  <p className="text-xs text-slate-500 mt-0.5">
+                    For: <span className="font-semibold text-slate-700">{service.title}</span>
                   </p>
                 </div>
 
                 {submitted ? (
-                  <div className="text-center py-6 space-y-3 bg-white rounded-xl p-4 border border-slate-200">
-                    <div className="text-3xl text-emerald-500">✓</div>
+                  <div className="text-center py-6 space-y-2 bg-slate-50 rounded p-4 border border-slate-200">
                     <p className="text-xs font-bold text-slate-800">
-                      Enquiry initiated! Our duty team is on it.
+                      Requirement dispatched to operations desk.
                     </p>
                     <button
                       onClick={() => setSubmitted(false)}
-                      className="text-xs text-[#0284c7] font-semibold underline"
+                      className="text-xs text-[#1D70B8] underline"
                     >
-                      Send another inquiry
+                      Submit additional requirement
                     </button>
                   </div>
                 ) : (
                   <form onSubmit={handleSidebarWhatsApp} className="space-y-3">
                     <div>
-                      <label className="block text-xs font-semibold text-slate-700 mb-1">
-                        Your Full Name <span className="text-red-500">*</span>
+                      <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-600 mb-1">
+                        Full Name / Master <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="text"
@@ -213,13 +204,13 @@ export default function ServiceDetailTemplate({ service }: ServiceDetailTemplate
                         placeholder="e.g. Capt. Rajesh"
                         value={fullName}
                         onChange={(e) => setFullName(e.target.value)}
-                        className="w-full text-xs border border-slate-300 rounded-lg px-3 py-2 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                        className="w-full text-xs border border-slate-300 rounded px-3 py-2 bg-white text-slate-900 focus:outline-none focus:border-[#081526]"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-semibold text-slate-700 mb-1">
-                        Phone / Mobile <span className="text-red-500">*</span>
+                      <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-600 mb-1">
+                        Contact Phone <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="tel"
@@ -227,78 +218,79 @@ export default function ServiceDetailTemplate({ service }: ServiceDetailTemplate
                         placeholder="+91 98765 43210"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        className="w-full text-xs border border-slate-300 rounded-lg px-3 py-2 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                        className="w-full text-xs border border-slate-300 rounded px-3 py-2 bg-white text-slate-900 focus:outline-none focus:border-[#081526]"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-semibold text-slate-700 mb-1">
-                        Port / Vessel / Location
+                      <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-600 mb-1">
+                        Vessel / Port / Terminal
                       </label>
                       <input
                         type="text"
-                        placeholder="e.g. Mundra, Hazira, JNPT"
+                        placeholder="e.g. Mundra Berth 4, Hazira"
                         value={port}
                         onChange={(e) => setPort(e.target.value)}
-                        className="w-full text-xs border border-slate-300 rounded-lg px-3 py-2 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                        className="w-full text-xs border border-slate-300 rounded px-3 py-2 bg-white text-slate-900 focus:outline-none focus:border-[#081526]"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-semibold text-slate-700 mb-1">
-                        Cargo / Survey Details
+                      <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-600 mb-1">
+                        Inspection Scope
                       </label>
                       <textarea
                         rows={2}
-                        placeholder="Commodity, tonnage, expected date..."
+                        placeholder="Cargo type, estimated tonnage, ETA..."
                         value={notes}
                         onChange={(e) => setNotes(e.target.value)}
-                        className="w-full text-xs border border-slate-300 rounded-lg px-3 py-2 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                        className="w-full text-xs border border-slate-300 rounded px-3 py-2 bg-white text-slate-900 focus:outline-none focus:border-[#081526]"
                       ></textarea>
                     </div>
 
                     <div className="pt-2">
                       <button
                         type="submit"
-                        className="w-full py-2.5 px-4 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs rounded-lg shadow transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                        className="w-full py-2.5 px-4 bg-[#C25E00] hover:bg-[#A34E00] text-white font-bold text-xs uppercase tracking-wider rounded shadow-xs transition-colors cursor-pointer"
                       >
-                        <span>Send via WhatsApp</span>
-                        <span>→</span>
+                        Submit Request via WhatsApp →
                       </button>
                     </div>
                   </form>
                 )}
 
-                {/* Direct Hotlines */}
-                <div className="mt-6 pt-4 border-t border-slate-200/80 space-y-2 text-xs">
-                  <div className="font-bold text-slate-800">Direct Contact Hotlines:</div>
+                {/* Hotlines */}
+                <div className="mt-6 pt-4 border-t border-slate-100 space-y-1.5 text-xs">
+                  <div className="font-mono text-[10px] uppercase text-slate-400">
+                    DIRECT DESK LINES:
+                  </div>
                   <a
                     href={`tel:${COMPANY_INFO.contacts.phones[0].raw}`}
-                    className="block text-slate-600 hover:text-[#0284c7]"
+                    className="block font-medium text-slate-700 hover:text-[#1D70B8]"
                   >
-                    📞 {COMPANY_INFO.contacts.phones[0].display} (Director)
+                    Director: {COMPANY_INFO.contacts.phones[0].display}
                   </a>
                   <a
                     href={`tel:${COMPANY_INFO.contacts.phones[1].raw}`}
-                    className="block text-slate-600 hover:text-[#0284c7]"
+                    className="block font-medium text-slate-700 hover:text-[#1D70B8]"
                   >
-                    📞 {COMPANY_INFO.contacts.phones[1].display} (General Manager)
+                    GM Operations: {COMPANY_INFO.contacts.phones[1].display}
                   </a>
                 </div>
 
-                {/* Other Services Navigation List */}
-                <div className="mt-6 pt-4 border-t border-slate-200/80">
-                  <div className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
-                    Other Services:
+                {/* Other Services */}
+                <div className="mt-6 pt-4 border-t border-slate-100">
+                  <div className="font-mono text-[10px] uppercase text-slate-400 mb-2">
+                    OTHER SERVICE DIVISIONS:
                   </div>
-                  <ul className="space-y-1.5 text-xs">
+                  <ul className="space-y-1 text-xs">
                     {SERVICES.filter((s) => s.id !== service.id).map((other) => (
                       <li key={other.id}>
                         <Link
                           href={`/services/${other.slug}`}
-                          className="text-[#0e2b5c] hover:text-[#0284c7] font-semibold flex items-center gap-1 transition-colors"
+                          className="text-slate-700 hover:text-[#1D70B8] flex items-center gap-1.5 py-0.5"
                         >
-                          <span className="text-sky-500">▸</span> {other.title}
+                          <span className="text-slate-400">▪</span> {other.title}
                         </Link>
                       </li>
                     ))}
